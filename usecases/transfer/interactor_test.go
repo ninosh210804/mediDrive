@@ -83,8 +83,8 @@ func TestTransfer_InsufficientFunds(t *testing.T) {
 	sourceID := contracts.AccountID("account-1")
 	destID := contracts.AccountID("account-2")
 
-	source := domain.NewAccount(sourceID, 10000, contracts.AccountStatusActive)  // 100.00
-	dest := domain.NewAccount(destID, 50000, contracts.AccountStatusActive)      // 500.00
+	source := domain.NewAccount(sourceID, 10000, contracts.AccountStatusActive) // 100.00
+	dest := domain.NewAccount(destID, 50000, contracts.AccountStatusActive)     // 500.00
 
 	repository.Save(source)
 	repository.Save(dest)
