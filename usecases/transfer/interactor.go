@@ -10,11 +10,8 @@ import (
 )
 
 var (
-	// ErrInvalidRequest occurs when the request is invalid
 	ErrInvalidRequest = errors.New("invalid transfer request")
-	// ErrSameAccount occurs when trying to transfer to same account
-	ErrSameAccount = errors.New("cannot transfer to the same account")
-	// ErrTransferFailed occurs when transfer operations fail
+	ErrSameAccount    = errors.New("cannot transfer to the same account")
 	ErrTransferFailed = errors.New("transfer failed")
 )
 

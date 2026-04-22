@@ -10,7 +10,6 @@ import (
 )
 
 func TestTransfer_HappyPath(t *testing.T) {
-	// Setup
 	repository := repo.NewAccountRepo()
 	sourceID := contracts.AccountID("account-1")
 	destID := contracts.AccountID("account-2")

@@ -2,10 +2,8 @@ package contracts
 
 import "context"
 
-// AccountID is a unique identifier for an account
 type AccountID string
 
-// AccountStatus represents the status of an account
 type AccountStatus string
 
 const (
@@ -91,14 +89,9 @@ type AccountRepository interface {
 // Account is imported from domain package but defined here as an interface placeholder
 // The actual implementation is in the domain package
 type Account interface {
-	// ID returns the account ID
 	ID() AccountID
-	// Balance returns the current balance in cents
 	Balance() int64
-	// Status returns the account status
 	Status() AccountStatus
-	// Withdraw withdraws an amount from the account
 	Withdraw(amount int64) error
-	// Deposit deposits an amount to the account
 	Deposit(amount int64) error
 }

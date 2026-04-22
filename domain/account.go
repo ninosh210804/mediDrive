@@ -8,14 +8,10 @@ import (
 )
 
 var (
-	// ErrInsufficientFunds occurs when attempting to withdraw more than available
 	ErrInsufficientFunds = errors.New("insufficient funds")
-	// ErrInvalidAmount occurs when amount is zero or negative
-	ErrInvalidAmount = errors.New("invalid amount: must be positive")
-	// ErrAccountInactive occurs when account is not active
-	ErrAccountInactive = errors.New("account is not active")
-	// ErrNegativeBalance occurs when balance would go negative
-	ErrNegativeBalance = errors.New("operation would result in negative balance")
+	ErrInvalidAmount     = errors.New("invalid amount: must be positive")
+	ErrAccountInactive   = errors.New("account is not active")
+	ErrNegativeBalance   = errors.New("operation would result in negative balance")
 )
 
 // Account represents a bank account in the domain

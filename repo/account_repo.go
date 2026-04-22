@@ -10,7 +10,6 @@ import (
 
 // AccountRepo implements the AccountRepository interface
 type AccountRepo struct {
-	// In real implementation, this would be a database connection
 	store map[contracts.AccountID]*domain.Account
 }
 
@@ -82,10 +81,6 @@ func (r *AccountRepo) Apply(mutation *contracts.Mutation) error {
 	if mutation.Table != "accounts" {
 		return fmt.Errorf("invalid table: %s", mutation.Table)
 	}
-
-	// In a real implementation, this would execute the database mutation
-	// For this implementation, it's a placeholder that the service layer would use
-	// The repository never calls this - it only returns the mutation
 
 	return nil
 }
